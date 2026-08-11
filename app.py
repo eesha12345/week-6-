@@ -5,18 +5,19 @@ import joblib
 model = joblib.load("sentiment_model.pkl")
 vectorizer = joblib.load("vectorizer.pkl")
 
-# Streamlit page
+# Streamlit page layout setup
 st.set_page_config(
     page_title="Sentiment Analysis",
-    page_icon="😊"
+    page_icon="🧠",
 )
 
-st.title("😊 Sentiment Analysis Classifier")
+st.title("🗣️ Sentiment Analysis Classifier")
 st.write("Enter a review below to predict whether it is Positive or Negative.")
 
 review = st.text_area("Enter your review")
 
-if review.strip() == "":
+if st.button("Predict"):
+    if review.strip() == "":
         st.warning("Please enter a review.")
     else:
         # 1. Clear punctuation and check text directly
@@ -51,6 +52,9 @@ if review.strip() == "":
         else:
             st.error("😡 Negative Review")
             st.info("💬 **Comment:** Bad feedback! This review requires attention or manual follow-up.")
+
+
+
 
 
 
