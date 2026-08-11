@@ -2,8 +2,8 @@ import streamlit as st
 import joblib
 
 # Load model and vectorizer
-model = joblib.load("src/models/sentiment_model.pkl")
-vectorizer = joblib.load("src/models/vectorizer.pkl")
+model = joblib.load("sentiment_model.pkl")
+vectorizer = joblib.load("vectorizer.pkl")
 
 # Streamlit page
 st.set_page_config(
