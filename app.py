@@ -31,7 +31,7 @@ if st.button("Predict"):
 
         # 3. Direct matching rules to bypass model bias completely
         neg_words = ["dont", "not", "bad", "terrible", "worst", "hate", "no", "disappointed", "poor"]
-        pos_words = ["like", "good", "love", "great", "excellent", "awesome", "amazing", "satisfied"]
+        pos_words = ["like", "good", "love", "great", "excellent", "awesome", "amazing", "satisfied","wow"]
 
         # Check if any negative or positive words are in the text
         has_neg = any(w in words for w in neg_words) or any(w in clean_review for w in ["dont ", "not "])
